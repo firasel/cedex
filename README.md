@@ -1,1 +1,1 @@
-# Cedex | Personal portfolio React Next.JS template.
+# Cedex | Personal portfolio React Next.JS template
