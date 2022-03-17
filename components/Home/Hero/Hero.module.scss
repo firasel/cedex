@@ -40,10 +40,93 @@
     }
   }
   .heroImage {
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
     img {
       border-radius: 8px;
       border: 0;
+    }
+    .circle1 {
+      position: absolute !important;
+      top: 1rem;
+      left: calc(100vw - 106vw);
+      transform: scale(0.8) rotate(-110deg);
+    }
+    .circle2 {
+      position: absolute !important;
+      bottom: -6.2rem;
+      right: -7.5vw;
+      transform: scale(0.8);
+    }
+    .rectangle {
+      position: absolute !important;
+      bottom: 3vh;
+      left: -2.5vw;
+      transform: scale(0.8);
+    }
+    .polygon {
+      position: absolute !important;
+      top: 1rem;
+      right: -2vw;
+      transform: scale(0.8);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .heroContainer {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+    .heroDetails {
+      h5,
+      h2,
+      p {
+        margin: 0 0 1rem 0;
+        letter-spacing: 0.3px;
+      }
+      h5 {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        letter-spacing: 0;
+      }
+    }
+    .heroImage {
+      .circle1 {
+        left: -12vw;
+        transform: scale(0.7) rotate(-110deg);
+      }
+      .circle2 {
+        bottom: -7rem;
+        right: -15vw;
+        transform: scale(0.7);
+      }
+      .rectangle {
+        left: -5vw;
+        transform: scale(0.7);
+      }
+      .polygon {
+        right: -5vw;
+        transform: scale(0.7);
+      }
+    }
+  }
+  @media screen and (max-width: 574px) {
+    .heroImage {
+      .circle1 {
+        left: -20vw;
+      }
+      .circle2 {
+        right: -20vw;
+      }
+      .rectangle {
+        left: -12vw;
+      }
+      .polygon {
+        right: -8vw;
+      }
     }
   }
 }

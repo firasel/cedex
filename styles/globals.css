@@ -12,3 +12,53 @@ a {
   margin: 0;
   font-family: "DM Sans", sans-serif;
 }
+
+.sectionStyle {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.row > div:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.row > div:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .row > div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .sectionStyle {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sectionStyle {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sectionStyle {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .sectionStyle {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
