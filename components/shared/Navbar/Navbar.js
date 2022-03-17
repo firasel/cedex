@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import LogoImg from "../../../assets/images/Logo.png";
+import LogoImg from "../../../assets/images/common/Logo.png";
 import style from "./Navbar.module.scss";
 
 const NavBar = () => {

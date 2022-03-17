@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import ProfileImg from "../../../assets/images/profile01.jpg";
+import ProfileImg from "../../../assets/images/Hero/profile01.jpg";
 import style from "./Hero.module.scss";
 
 const Hero = () => {
