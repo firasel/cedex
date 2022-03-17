@@ -3,6 +3,7 @@
     padding-top: 4rem;
     padding-bottom: 7rem;
   }
+
   .heroDetails {
     h5,
     h2,
@@ -39,6 +40,7 @@
       }
     }
   }
+
   .heroImage {
     width: 100%;
     height: 100%;
@@ -50,28 +52,49 @@
     .circle1 {
       position: absolute !important;
       top: 1rem;
-      left: calc(100vw - 106vw);
-      transform: scale(0.8) rotate(-110deg);
+      left: -5vw;
+      width: 10rem;
+      height: 10rem;
     }
     .circle2 {
       position: absolute !important;
-      bottom: -6.2rem;
-      right: -7.5vw;
-      transform: scale(0.8);
+      bottom: -5rem;
+      right: -5vw;
+      width: 11rem;
+      height: 11rem;
     }
     .rectangle {
       position: absolute !important;
-      bottom: 3vh;
+      bottom: 4vh;
       left: -2.5vw;
-      transform: scale(0.8);
+      width: 5rem;
     }
     .polygon {
       position: absolute !important;
       top: 1rem;
       right: -2vw;
-      transform: scale(0.8);
+      width: 4rem;
+      height: 4rem;
     }
   }
+
+  @media screen and (max-width: 1199px) {
+    .heroImage {
+      .circle1 {
+        width: 7rem;
+        height: 7rem;
+      }
+      .circle2 {
+        width: 8rem;
+        height: 8rem;
+        bottom: -2.5rem;
+      }
+      .rectangle {
+        width: 4rem;
+      }
+    }
+  }
+
   @media screen and (max-width: 767px) {
     .heroContainer {
       padding-top: 1rem;
@@ -95,37 +118,44 @@
     }
     .heroImage {
       .circle1 {
-        left: -12vw;
-        transform: scale(0.7) rotate(-110deg);
+        left: -8vw;
+        width: 8rem;
+        height: 8rem;
       }
       .circle2 {
-        bottom: -7rem;
-        right: -15vw;
-        transform: scale(0.7);
+        bottom: -3.5rem;
+        right: -9vw;
+        width: 9rem;
+        height: 9rem;
       }
       .rectangle {
         left: -5vw;
-        transform: scale(0.7);
       }
       .polygon {
-        right: -5vw;
-        transform: scale(0.7);
+        right: -4vw;
       }
     }
   }
+
   @media screen and (max-width: 574px) {
     .heroImage {
       .circle1 {
-        left: -20vw;
+        left: -12vw;
+        width: 7rem;
+        height: 7rem;
       }
       .circle2 {
-        right: -20vw;
+        bottom: -3rem;
+        right: -13vw;
+        width: 8rem;
+        height: 8rem;
       }
       .rectangle {
-        left: -12vw;
+        left: -6vw;
+        width: 4rem;
       }
       .polygon {
-        right: -8vw;
+        right: -5vw;
       }
     }
   }

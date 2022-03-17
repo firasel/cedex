@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
@@ -37,18 +38,38 @@ const Hero = () => {
             {/*  */}
             {/* Image background style start*/}
             <div>
-              <div className="circle1">
+              <motion.div
+                initial={{ rotate: 0, scale: 0.8 }}
+                animate={{ rotate: 359, scale: 0.8 }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                className="circle1"
+              >
                 <Image src={Ellipse} alt="ellipse" />
-              </div>
-              <div className="circle2">
+              </motion.div>
+              <motion.div
+                initial={{ rotate: 0, scale: 0.8 }}
+                animate={{ rotate: -359, scale: 0.8 }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                className="circle2"
+              >
                 <Image src={Ellipse} alt="ellipse" />
-              </div>
-              <div className="rectangle">
+              </motion.div>
+              <motion.div
+                initial={{ rotate: 0, scale: 0.8 }}
+                animate={{ rotate: 359, scale: 0.8 }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                className="rectangle"
+              >
                 <Image src={Rectangle} alt="ellipse" />
-              </div>
-              <div className="polygon">
+              </motion.div>
+              <motion.div
+                initial={{ rotate: 0, scale: 0.8 }}
+                animate={{ rotate: -359, scale: 0.8 }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                className="polygon"
+              >
                 <Image src={Polygon} alt="ellipse" />
-              </div>
+              </motion.div>
             </div>
             {/* Image background style end*/}
           </div>
