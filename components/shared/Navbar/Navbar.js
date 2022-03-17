@@ -12,11 +12,9 @@ const NavBar = () => {
         className={style.navbarStyle}
         collapseOnSelect
         expand="lg"
-        bg="dark"
-        variant="dark"
       >
         <Container>
-          <Navbar.Brand className="logo py-4" href="#">
+          <Navbar.Brand className="logo" href="#">
             <Image src={LogoImg} alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
