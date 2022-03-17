@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Cedex</title>
+        <title>Cedex - Personal portfolio</title>
         <meta
           name="description"
           content="Cedex | Personal portfolio React Next.JS template"
