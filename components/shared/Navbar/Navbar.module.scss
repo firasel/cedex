@@ -1,0 +1,21 @@
+.navbarStyle :global {
+  .logo {
+    width: 5.8rem;
+    overflow: hidden;
+  }
+  .menuItems {
+    a {
+      padding: 5px 10px;
+      margin-left: 10px;
+      letter-spacing: 0.7px;
+      color: darken($color: #fafafa, $amount: 10);
+      transition: all 0.2s;
+      font-weight: 500;
+      font-size: 1.1rem;
+      &:hover {
+        color: #fafafa;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
