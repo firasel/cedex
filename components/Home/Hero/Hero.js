@@ -16,16 +16,9 @@ const Hero = () => {
           {/* Hero details start */}
           <div className="heroDetails">
             <h5>Senior UX/UI Designer</h5>
-            <h2>
-              Hello, I am <br />
-              John Doe
-            </h2>
+            <h2>Hello, I am <br /> John Doe</h2>
             <p>
-              I am a freelancer based in the United State and I&apos;ve been
-              constructing noteworthy UX/UI designs and websites for years,
-              which comply with the brand new layout trends. I help convert an
-              imaginative and prescient idea into significant and beneficial
-              merchandise.
+              I am a freelancer based in the United State and I&apos;ve been constructing noteworthy UX/UI designs and websites for years, which comply with the brand new layout trends. I help convert an imaginative and prescient idea into significant and beneficial merchandise.
             </p>
             <Button>Hire Me</Button>
           </div>
@@ -35,7 +28,6 @@ const Hero = () => {
           <div className="heroImage">
             {/* Hero profile image */}
             <Image layout="responsive" src={ProfileImg} alt="hero image" />
-            {/*  */}
             {/* Image background style start*/}
             <div>
               <motion.div

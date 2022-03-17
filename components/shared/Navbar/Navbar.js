@@ -8,22 +8,26 @@ import LogoImg from "../../../assets/images/common/Logo.png";
 import style from "./Navbar.module.scss";
 
 const NavBar = () => {
+  // State for menu expand and unexpand control
   const [expand, setExpand] = useState(true);
 
   return (
     <>
       <Navbar className={style.navbarStyle} collapseOnSelect expand="md">
         <Container className="py-1 py-md-3 position-relative">
+          {/* Navbar logo start */}
           <Navbar.Brand className="logo" href="#">
             <Image src={LogoImg} alt="logo" />
           </Navbar.Brand>
+          {/* Navbar logo end */}
           <Navbar.Toggle
             onClick={() => setExpand(!expand)}
-            className="toggeBtn"
+            className="toggleBtn"
             aria-controls="responsive-navbar-nav"
           >
             {expand ? <CgMenuRight /> : <IoMdClose />}
           </Navbar.Toggle>
+          {/* Navbar menu start */}
           <Navbar.Collapse
             className="menuItemContainer"
             id="responsive-navbar-nav"
@@ -56,6 +60,7 @@ const NavBar = () => {
               </span>
             </Nav>
           </Navbar.Collapse>
+          {/* Navbar menu end */}
         </Container>
       </Navbar>
     </>

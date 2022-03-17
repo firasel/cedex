@@ -1,8 +1,11 @@
 .navbarStyle :global {
+  // Logo css start
   .logo {
     width: 5.8rem;
     overflow: hidden;
   }
+  // Logo css end
+  // Menu items css start
   .menuItems {
     span > a {
       padding: 5px 10px;
@@ -41,7 +44,9 @@
       }
     }
   }
-  .toggeBtn {
+  // Menu items css end
+  // Menu toggle css start
+  .toggleBtn {
     color: white;
     font-size: 2.3rem;
     border: 0;
@@ -51,7 +56,8 @@
       box-shadow: none;
     }
   }
-
+  // Menu toggle css end
+  // Responsive css start
   @media screen and (max-width: 767px) {
     .menuItems {
       span {
@@ -100,4 +106,5 @@
       padding: 2px 5px;
     }
   }
+  // Responsive css end
 }
