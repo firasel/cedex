@@ -7,7 +7,7 @@ const Specialty = () => {
   return (
     <div className={`${style.specialtyStyle} sectionStyle`}>
       <Container>
-        <Row className="m-0 p-0 gy-3 gy-md-0 gx-2 gx-md-3 gx-lg-5 row-cols-1 row-cols-md-3">
+        <Row className="m-0 p-0 gy-4 gy-md-0 gx-2 gx-md-3 gx-lg-5 row-cols-1 row-cols-md-3">
           {/* Cards start */}
           <Col className="cardStyle">
             <div>
