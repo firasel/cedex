@@ -18,7 +18,7 @@ a {
   padding-bottom: 30px;
 }
 
-.row > div:first-child {
+/* .row > div:first-child {
   padding-left: 0;
   margin-left: 0;
 }
@@ -33,7 +33,7 @@ a {
     padding: 0;
     margin: 0;
   }
-}
+} */
 
 @media screen and (min-width: 576px) {
   .sectionStyle {

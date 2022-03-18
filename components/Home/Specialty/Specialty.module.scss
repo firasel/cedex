@@ -1,0 +1,30 @@
+.specialtyStyle :global {
+  // Card css start
+  .cardStyle {
+    text-align: center;
+    > div {
+      font-size: 3.5rem;
+      background-color: lighten($color: #6154f2, $amount: 30);
+      box-shadow: lighten($color: #6154f2, $amount: 32) 0px 0px 20px;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      padding: 10px;
+      margin: 0 auto 30px auto;
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #161616;
+    }
+    p {
+      font-size: 1rem;
+      color: #4a4a4a;
+      font-family: "Mulish", sans-serif;
+    }
+  }
+  // Card css end
+}
