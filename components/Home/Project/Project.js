@@ -16,6 +16,7 @@ const Project = () => {
       <Container>
         <h2 className="title">My Recent Projects</h2>
         <Row className="g-3">
+          {/* Project Cards start */}
           <Col md={7} className="projectCard">
             <div>
               <div>
@@ -88,6 +89,7 @@ const Project = () => {
               <Image layout="fill" src={ProjectImg6} alt="Project image" />
             </div>
           </Col>
+          {/* Project Cards end */}
         </Row>
       </Container>
     </div>

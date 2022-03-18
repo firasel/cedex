@@ -1,9 +1,12 @@
 .projectStyle :global {
+  // Title css start
   .title {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 30px;
   }
+  // Title css end
+  // Card css start
   .projectCard {
     > div {
       width: 100%;
@@ -60,6 +63,8 @@
       }
     }
   }
+  // Card css end
+  // Responsive css
   @media screen and (min-width: 1400px) {
     .projectCard {
       > div {
