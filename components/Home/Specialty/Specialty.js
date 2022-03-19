@@ -11,7 +11,7 @@ const Specialty = () => {
           {/* Cards start */}
           <Col className="cardStyle">
             <div>
-              <FcDecision />
+              <FcDecision version="1.0" />
             </div>
             <h3>Creative design</h3>
             <p>
@@ -21,7 +21,7 @@ const Specialty = () => {
           </Col>
           <Col className="cardStyle">
             <div>
-              <FcMultipleSmartphones />
+              <FcMultipleSmartphones version="1.0" />
             </div>
             <h3>Best quality</h3>
             <p>
@@ -31,7 +31,7 @@ const Specialty = () => {
           </Col>
           <Col className="cardStyle">
             <div>
-              <FcIdea />
+              <FcIdea version="1.0" />
             </div>
             <h3>Awesome Idea</h3>
             <p>
