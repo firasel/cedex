@@ -17,23 +17,12 @@ a {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-/* .row > div:first-child {
-  padding-left: 0;
-  margin-left: 0;
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #11142d;
 }
-
-.row > div:last-child {
-  padding-right: 0;
-  margin-right: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .row > div {
-    padding: 0;
-    margin: 0;
-  }
-} */
 
 @media screen and (min-width: 576px) {
   .sectionStyle {

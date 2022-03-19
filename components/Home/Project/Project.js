@@ -14,7 +14,7 @@ const Project = () => {
   return (
     <div className={`${style.projectStyle} sectionStyle`}>
       <Container>
-        <h2 className="title">My Recent Projects</h2>
+        <h2 className="sectionTitle">My Recent Projects</h2>
         <Row className="g-3">
           {/* Project Cards start */}
           <Col md={7} className="projectCard">
