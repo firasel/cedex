@@ -3,7 +3,8 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.7rem;
-    margin-bottom: 3rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
     color: #515151;
   }
   .journeyCard {
@@ -12,10 +13,10 @@
     gap: 0.8rem;
     margin-top: 1.5rem;
     .logo {
-      width: 6rem;
-      height: 6rem;
+      width: 5rem;
+      height: 5rem;
       border-radius: 8px;
-      padding: 5px;
+      padding: 10px;
       background-color: lighten($color: #6154f2, $amount: 30);
       box-shadow: lighten($color: #6154f2, $amount: 32) 0px 0px 20px;
       svg {

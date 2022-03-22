@@ -1,6 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { FcCdLogo } from "react-icons/fc";
+import {
+  BsGithub,
+  BsPinterest,
+  BsReddit,
+  BsSlack,
+  BsSnapchat,
+  BsTwitter
+} from "react-icons/bs";
 import style from "./Journey.module.scss";
 
 const Journey = () => {
@@ -9,7 +16,7 @@ const Journey = () => {
       <Container>
         <h2 className="sectionTitle">My Journey</h2>
         <Row>
-          <Col md={6} lg={5}>
+          <Col md={10} lg={6} xl={5}>
             <p className="subTitle">
               I am a person who is very excited to learn and is disciplined on
               the given task and always gives the best for the company.
@@ -20,64 +27,64 @@ const Journey = () => {
           <Col md={6} lg={5}>
             <div className="journeyCard">
               <div className="logo">
-                <FcCdLogo version="1.0" />
+                <BsSlack color="#6154f2" />
               </div>
               <div className="content">
                 <h4>Lead UI Designer</h4>
-                <span>Ed-Tech</span>
-                <p>2018 - 2019</p>
+                <span>Slack</span>
+                <p>2021 - Present</p>
               </div>
             </div>
             <div className="journeyCard">
               <div className="logo">
-                <FcCdLogo version="1.0" />
+                <BsGithub color="#455A64" />
               </div>
               <div className="content">
-                <h4>Lead UI Designer</h4>
-                <span>Ed-Tech</span>
-                <p>2018 - 2019</p>
+                <h4>UI Designer</h4>
+                <span>Github</span>
+                <p>2021 - 2021</p>
               </div>
             </div>
             <div className="journeyCard">
               <div className="logo">
-                <FcCdLogo version="1.0" />
+                <BsTwitter color="#03A9F4" />
               </div>
               <div className="content">
-                <h4>Lead UI Designer</h4>
-                <span>Ed-Tech</span>
-                <p>2018 - 2019</p>
+                <h4>Senior UI Designer</h4>
+                <span>Twitter</span>
+                <p>2020 - 2021</p>
               </div>
             </div>
           </Col>
           <Col md={6} lg={5}>
             <div className="journeyCard">
               <div className="logo">
-                <FcCdLogo version="1.0" />
+                <BsSnapchat color="#e854f2" />
               </div>
               <div className="content">
-                <h4>Lead UI Designer</h4>
-                <span>Ed-Tech</span>
+                <h4>UI/UX Designer</h4>
+                <span>Snapchat</span>
+                <p>2019 - 2020</p>
+              </div>
+            </div>
+            <div className="journeyCard">
+              <div className="logo">
+                <BsReddit color="#F26322" />
+              </div>
+              <div className="content">
+                <h4>UX Designer</h4>
+                <span>Reddit</span>
                 <p>2018 - 2019</p>
               </div>
             </div>
             <div className="journeyCard">
               <div className="logo">
-                <FcCdLogo version="1.0" />
+                <BsPinterest color="#E60023" />
               </div>
               <div className="content">
-                <h4>Lead UI Designer</h4>
-                <span>Ed-Tech</span>
-                <p>2018 - 2019</p>
-              </div>
-            </div>
-            <div className="journeyCard">
-              <div className="logo">
-                <FcCdLogo version="1.0" />
-              </div>
-              <div className="content">
-                <h4>Lead UI Designer</h4>
-                <span>Ed-Tech</span>
-                <p>2018 - 2019</p>
+                <h4>Web Designer</h4>
+                <span>Pinterest</span>
+                <p>2018 - 2018</p>
               </div>
             </div>
           </Col>
