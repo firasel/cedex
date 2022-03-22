@@ -13,8 +13,8 @@
     gap: 0.8rem;
     margin-top: 1.5rem;
     .logo {
-      width: 5rem;
-      height: 5rem;
+      width: 6rem;
+      height: 6rem;
       border-radius: 8px;
       padding: 10px;
       background-color: lighten($color: #6154f2, $amount: 30);
@@ -40,6 +40,34 @@
         font-size: 1rem;
         color: #515151;
         margin-top: 5px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .subTitle {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .journeyCard {
+      gap: 0.6rem;
+      margin-top: 1rem;
+      .logo {
+        width: 4rem;
+        height: 4rem;
+        padding: 10px;
+      }
+    }
+    .content {
+      h4 {
+        font-size: 1.2rem !important;
+        margin-bottom: 3px !important;
+      }
+      span {
+        font-size: 0.95rem !important;
+      }
+      p {
+        font-size: 0.85rem !important;
       }
     }
   }
