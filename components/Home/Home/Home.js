@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Journey from "../Journey/Journey";
 import Project from "../Project/Project";
 import Specialty from "../Specialty/Specialty";
+import TouchWithMe from "../TouchWithMe/TouchWithMe";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Specialty />
       <Project />
       <Journey />
+      <TouchWithMe />
     </>
   );
 };

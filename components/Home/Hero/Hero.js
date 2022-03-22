@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import Ellipse from "../../../assets/images/Hero/Ellipse1.svg";
+import Ellipse from "../../../assets/images/common/Ellipse1.svg";
 import Polygon from "../../../assets/images/Hero/Polygon1.svg";
 import ProfileImg from "../../../assets/images/Hero/profile01.jpg";
 import Rectangle from "../../../assets/images/Hero/Rectangle.svg";
