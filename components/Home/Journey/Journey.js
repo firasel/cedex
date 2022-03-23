@@ -14,15 +14,18 @@ const Journey = () => {
   return (
     <div className={`${style.journeyStyle} sectionStyle`}>
       <Container>
-        <h2 className="sectionTitle">My Journey</h2>
+        {/* Heading start */}
         <Row>
           <Col md={10} lg={6} xl={5}>
+            <h2 className="sectionTitle">My Journey</h2>
             <p className="subTitle">
               I am a person who is very excited to learn and is disciplined on
               the given task and always gives the best for the company.
             </p>
           </Col>
         </Row>
+        {/* Heading end */}
+        {/* Cards start */}
         <Row className="justify-content-md-between">
           <Col md={6} lg={5}>
             <div className="journeyCard">
@@ -89,6 +92,7 @@ const Journey = () => {
             </div>
           </Col>
         </Row>
+        {/* Cards end */}
       </Container>
     </div>
   );

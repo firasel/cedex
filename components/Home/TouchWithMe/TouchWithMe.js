@@ -11,8 +11,9 @@ const TouchWithMe = () => {
       <div className="sectionStyle">
         <Container className="position-relative">
           <Row className="align-items-center justify-content-between">
+            {/* Content start */}
             <Col className="contentStyle order-1 order-md-0" md={6} lg={6}>
-              <h4 className="sectionTitle">Get Touch With Me</h4>
+              <h2 className="sectionTitle">Get Touch With Me</h2>
               <h5>Who Person Growth of Startup in USA</h5>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum
@@ -22,6 +23,8 @@ const TouchWithMe = () => {
               </p>
               <button>Let&apos;s Talk</button>
             </Col>
+            {/* Content end */}
+            {/* Image start */}
             <Col className="imageStyle order-0" md={6} lg={5}>
               <Image src={ProfileImg} layout="responsive" alt="image" />
               <div className="circle1">
@@ -31,6 +34,7 @@ const TouchWithMe = () => {
                 <Image src={Ellipse} alt="ellipse" />
               </div>
             </Col>
+            {/* Image end */}
           </Row>
           <div className="circle3">
             <Image src={Ellipse} alt="ellipse" />
