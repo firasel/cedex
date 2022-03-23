@@ -7,21 +7,43 @@ import testimonialData from "../../../data/testimonialData";
 import style from "./Testimonial.module.scss";
 
 const Testimonial = () => {
+  // State for control active slide style
   const [active, setActive] = useState(1);
-  const [sliderRef, slider] = useKeenSlider({
+
+  const [sliderRef] = useKeenSlider({
     mode: "free-snap",
+    breakpoints: {
+      "(max-width:991px)": {
+        slides: {
+          origin: 0,
+          perView: 1.6,
+          spacing: 25,
+        },
+      },
+      "(max-width:767px)": {
+        slides: {
+          origin: 0,
+          perView: 1.3,
+          spacing: 10,
+        },
+      },
+      "(max-width:450px)": {
+        slides: {
+          origin: 0,
+          perView: 1,
+          spacing: 0,
+        },
+      },
+    },
     slides: {
       origin: 0,
       perView: 2.4,
       spacing: 25,
     },
-    initial: 1,
     detailsChanged: (s) => {
       setActive(s?.track?.details?.abs);
     },
   });
-
-  console.log(active);
 
   return (
     <div className={`${style.testimonialStyle} sectionStyle`}>
@@ -36,7 +58,6 @@ const Testimonial = () => {
                 active === index && "activeStyle"
               } `}
             >
-              <p>{data?.message}</p>
               <div className="d-flex gap-2 align-items-center">
                 <div className="clientImage">
                   <Image
@@ -50,6 +71,7 @@ const Testimonial = () => {
                   <span>{data?.position}</span>
                 </div>
               </div>
+              <p>{data?.message}</p>
             </div>
           ))}
         </div>
