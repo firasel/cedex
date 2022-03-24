@@ -1,4 +1,5 @@
 import React from "react";
+import Blog from "../Blog/Blog";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Journey from "../Journey/Journey";
@@ -18,6 +19,7 @@ const Home = () => {
       <TouchWithMe />
       <Services />
       <Testimonial />
+      <Blog />
       <Footer />
     </>
   );

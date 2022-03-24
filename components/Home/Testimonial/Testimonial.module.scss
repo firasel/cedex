@@ -1,5 +1,6 @@
 .testimonialStyle :global {
   overflow: hidden;
+  background-color: lighten($color: #6154f2, $amount: 34);
   // Slide style
   .testimonialCard {
     margin-top: 2rem;
