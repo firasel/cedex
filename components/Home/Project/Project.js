@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -16,18 +17,29 @@ const Project = () => {
             <Col
               key={index}
               md={index === 2 ? 5 : index === 3 ? 7 : index % 2 === 0 ? 7 : 5}
-              className="projectCard"
             >
-              <div>
-                <div>
-                  <h5>{data?.category}</h5>
-                  <h3>{data?.title}</h3>
-                  <Button variant="none">
-                    View Project <MdOutlineArrowForwardIos />
-                  </Button>
+              <motion.div
+                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.3, delay: index * 0.2 },
+                }}
+                viewport={{ once: true }}
+              >
+                <div className="projectCard">
+                  <div>
+                    <div>
+                      <h5>{data?.category}</h5>
+                      <h3>{data?.title}</h3>
+                      <Button variant="none">
+                        View Project <MdOutlineArrowForwardIos />
+                      </Button>
+                    </div>
+                    <Image layout="fill" src={data.image} alt="Project image" />
+                  </div>
                 </div>
-                <Image layout="fill" src={data.image} alt="Project image" />
-              </div>
+              </motion.div>
             </Col>
           ))}
           {/* Project Cards end */}
