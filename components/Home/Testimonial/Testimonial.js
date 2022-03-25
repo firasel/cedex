@@ -48,10 +48,10 @@ const Testimonial = () => {
   return (
     <div className={`${style.testimonialStyle} sectionStyle`}>
       <Container>
-        <h2 className="sectionTitle">Testimonial from My Clients</h2>
+        <h2 className="sectionTitle">{testimonialData?.section?.title}</h2>
         {/* Testimonial slider start */}
         <div ref={sliderRef} className="keen-slider">
-          {testimonialData?.map((data, index) => (
+          {testimonialData?.testimonials?.map((data, index) => (
             <div
               key={index}
               className={`keen-slider__slide testimonialCard ${
