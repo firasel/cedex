@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
@@ -50,31 +51,41 @@ const Testimonial = () => {
       <Container>
         <h2 className="sectionTitle">{testimonialData?.section?.title}</h2>
         {/* Testimonial slider start */}
-        <div ref={sliderRef} className="keen-slider">
-          {testimonialData?.testimonials?.map((data, index) => (
-            <div
-              key={index}
-              className={`keen-slider__slide testimonialCard ${
-                active === index && "activeStyle"
-              } `}
-            >
-              <div className="d-flex gap-2 align-items-center">
-                <div className="clientImage">
-                  <Image
-                    layout="responsive"
-                    src={data?.image}
-                    alt="client image"
-                  />
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{ once: true }}
+        >
+          <div ref={sliderRef} className="keen-slider">
+            {testimonialData?.testimonials?.map((data, index) => (
+              <div
+                key={index}
+                className={`keen-slider__slide testimonialCard ${
+                  active === index && "activeStyle"
+                } `}
+              >
+                <div className="d-flex gap-2 align-items-center">
+                  <div className="clientImage">
+                    <Image
+                      layout="responsive"
+                      src={data?.image}
+                      alt="client image"
+                    />
+                  </div>
+                  <div>
+                    <h5>{data?.name}</h5>
+                    <span>{data?.position}</span>
+                  </div>
                 </div>
-                <div>
-                  <h5>{data?.name}</h5>
-                  <span>{data?.position}</span>
-                </div>
+                <p>{data?.message}</p>
               </div>
-              <p>{data?.message}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
         {/* Testimonial slider end */}
       </Container>
     </div>

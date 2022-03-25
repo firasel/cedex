@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import {
   FaComments,
   FaLongArrowAltRight,
@@ -16,7 +17,17 @@ const Blog = () => {
         <h2 className="sectionTitle">{blogData?.section?.title}</h2>
         <Row className="row-cols-1 row-cols-md-3 gy-4 gy-md-0">
           {blogData?.blogs?.map((data, index) => (
-            <Col key={index} className="blogCard">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.8, delay: index * 0.3 },
+              }}
+              viewport={{ once: true }}
+              key={index}
+              className="blogCard col"
+            >
               <div className="image">
                 <Image layout="responsive" src={data?.image} alt="blog image" />
               </div>
@@ -39,7 +50,7 @@ const Blog = () => {
                   Read More <FaLongArrowAltRight />
                 </button>
               </div>
-            </Col>
+            </motion.div>
           ))}
         </Row>
       </Container>
