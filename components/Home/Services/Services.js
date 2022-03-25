@@ -5,7 +5,7 @@ import style from "./Services.module.scss";
 
 const Services = () => {
   return (
-    <div className={`${style.serviceStyle} sectionStyle`}>
+    <div id="service" className={`${style.serviceStyle} sectionStyle`}>
       <Container>
         {/* Heading start */}
         <Row>

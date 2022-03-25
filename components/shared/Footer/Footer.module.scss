@@ -72,6 +72,11 @@
         li {
           margin-top: 1rem;
           cursor: pointer;
+          a {
+            &:hover {
+              color: white;
+            }
+          }
         }
       }
     }
@@ -103,8 +108,10 @@
         transition: all 0.2s;
         &:hover {
           background: white;
-          color: #6154f2;
           transition: all 0.2s;
+          a {
+            color: #6154f2 !important;
+          }
         }
         a {
           width: 100%;
