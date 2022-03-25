@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
@@ -10,14 +11,30 @@ const Footer = () => {
     <div className={style.footerStyle}>
       <div className="sectionStyle">
         <Container>
-          <div className="circle1">
+          <motion.div
+            initial={{ rotate: 0, scale: 0.5 }}
+            animate={{
+              rotate: [0, 100, 180, 90, 200, 80, 230, 90, 200, -360],
+              scale: 0.5,
+            }}
+            transition={{ duration: 7, repeat: Infinity }}
+            className="circle1"
+          >
             <Image src={Ellipse} alt="ellipse" />
-          </div>
+          </motion.div>
           <Row className="gy-4 gy-md-0 justify-content-between">
             <Col md={4} lg={3} className="newsLetter">
-              <div className="circle2">
+              <motion.div
+                initial={{ rotate: 0, scale: 0.8 }}
+                animate={{
+                  rotate: [0, 150, 250, 130, 280, 180, 290, 190, 300, -360],
+                  scale: 0.8,
+                }}
+                transition={{ duration: 7, repeat: Infinity }}
+                className="circle2"
+              >
                 <Image src={Ellipse} alt="ellipse" />
-              </div>
+              </motion.div>
               <Image src={footerData?.logo} alt="logo" />
               <br />
               <label>{footerData?.formTitle}</label>
@@ -55,9 +72,17 @@ const Footer = () => {
                 ))}
               </div>
               {/* Socila link end */}
-              <div className="circle3">
+              <motion.div
+                initial={{ rotate: 0, scale: 0.5 }}
+                animate={{
+                  rotate: [0, -100, -180, -90, -200, -80, -230, -90, -200, 360],
+                  scale: 0.5,
+                }}
+                transition={{ duration: 7, repeat: Infinity }}
+                className="circle3"
+              >
                 <Image src={Ellipse} alt="ellipse" />
-              </div>
+              </motion.div>
             </Col>
           </Row>
           <p className="mt-3 mb-0">{footerData?.copyRightMsg}</p>

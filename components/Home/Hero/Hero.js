@@ -29,7 +29,12 @@ const Hero = () => {
         <Col md={6} lg={4} className="d-flex align-items-center offset-lg-2">
           <div className="heroImage">
             {/* Hero profile image */}
-            <Image layout="responsive" src={heroData?.image} alt="hero image" />
+            <Image
+              layout="responsive"
+              src={heroData?.image}
+              alt="hero image"
+              priority
+            />
             {/* Image background style start*/}
             <div>
               <motion.div

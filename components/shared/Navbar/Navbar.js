@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
@@ -14,22 +14,41 @@ const NavBar = () => {
   const router = useRouter();
   // Navbar sticky state
   const [stickyState, setStickyState] = useState(false);
+  // Navbar ref and extra div height
+  const navbarRef = useRef();
+  const [height, setHeight] = useState(1);
 
+  // Track window scroll
+  const stickyHandler = (e) => {
+    const scrollTop = window.scrollY;
+    scrollTop >= 100 ? setStickyState(true) : setStickyState(false);
+  };
+  // Track navbar height depend on window size
+  const navbarHeightHandler = () => {
+    console.log("track");
+    setHeight(navbarRef?.current?.offsetHeight);
+  };
+
+  // Track window scroll
   useEffect(() => {
     window.addEventListener("scroll", stickyHandler);
     return () => {
       window.removeEventListener("scroll", stickyHandler);
     };
   });
-  // Track window scroll
-  const stickyHandler = (e) => {
-    const scrollTop = window.scrollY;
-    scrollTop >= 100 ? setStickyState(true) : setStickyState(false);
-  };
+  // Track window width
+  useEffect(() => {
+    // Add event listener
+    window?.addEventListener("resize", navbarHeightHandler);
+    // Remove event listener on cleanup
+    return () => window?.removeEventListener("resize", navbarHeightHandler);
+  }, []);
 
   return (
     <>
+      {stickyState && <div style={{ height: height }} className="w-100"></div>}
       <Navbar
+        ref={navbarRef}
         className={`${style.navbarStyle} ${
           stickyState && "navbarStickyStyle"
         } py-2 py-md-4`}
@@ -58,7 +77,7 @@ const NavBar = () => {
               {navbarData?.menus?.map((data, index) => (
                 <span
                   key={index}
-                  className={router?.asPath === data?.link && "active"}
+                  className={router?.asPath === data?.link ? "active" : ""}
                 >
                   <Nav.Link as={Link} href={data?.link}>
                     {data?.name}
