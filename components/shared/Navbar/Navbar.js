@@ -28,11 +28,13 @@ const NavBar = () => {
   return (
     <>
       <Navbar
-        className={`${style.navbarStyle} ${stickyState && 'navbarStickyStyle'}`}
+        className={`${style.navbarStyle} ${
+          stickyState && "navbarStickyStyle"
+        } py-2 py-md-4`}
         collapseOnSelect
         expand="md"
       >
-        <Container className="py-1 py-md-3 position-relative">
+        <Container className="position-relative">
           {/* Navbar logo start */}
           <Navbar.Brand className="logo" href="#">
             <Image src={LogoImg} alt="logo" />

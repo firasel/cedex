@@ -28,6 +28,8 @@ a {
   position: fixed;
   width: 100%;
   top: 0;
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
   background: #6154f2eb;
   z-index: 30;
   animation-name: topToShow;
@@ -47,6 +49,10 @@ a {
   .sectionTitle {
     font-size: 2rem;
     margin-bottom: 20px;
+  }
+  .navbarStickyStyle {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
 }
 
