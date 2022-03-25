@@ -3,6 +3,7 @@
   background-color: lighten($color: #6154f2, $amount: 34);
   // Card css start
   .projectCard {
+    height: 100%;
     > div {
       width: 100%;
       height: 100%;
@@ -16,6 +17,7 @@
       display: flex;
       > div {
         z-index: 10;
+        height: fit-content;
         h5 {
           font-size: 1rem;
           font-weight: 500;

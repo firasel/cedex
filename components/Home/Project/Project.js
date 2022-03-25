@@ -26,18 +26,17 @@ const Project = () => {
                   transition: { duration: 0.3, delay: index * 0.2 },
                 }}
                 viewport={{ once: true }}
+                className="projectCard"
               >
-                <div className="projectCard">
+                <div className="d-flex align-items-center">
                   <div>
-                    <div>
-                      <h5>{data?.category}</h5>
-                      <h3>{data?.title}</h3>
-                      <Button variant="none">
-                        View Project <MdOutlineArrowForwardIos />
-                      </Button>
-                    </div>
-                    <Image layout="fill" src={data.image} alt="Project image" />
+                    <h5>{data?.category}</h5>
+                    <h3>{data?.title}</h3>
+                    <Button variant="none">
+                      View Project <MdOutlineArrowForwardIos />
+                    </Button>
                   </div>
+                  <Image layout="fill" src={data.image} alt="Project image" />
                 </div>
               </motion.div>
             </Col>

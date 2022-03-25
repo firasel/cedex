@@ -92,8 +92,8 @@ const TouchWithMe = () => {
                 <Image src={Ellipse} alt="ellipse" />
               </motion.div>
               <motion.div
-                initial={{ y: 0, rotate: 0, scale: 0.5 }}
-                animate={{ y: [0, 30, 0], rotate: [-15, 0, -15], scale: 0.5 }}
+                initial={{ y: 0, rotate: -115, scale: 0.5 }}
+                animate={{ y: [0, 30, 0], rotate: [-130, -115, -130], scale: 0.5 }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="circle2"
               >
@@ -103,8 +103,8 @@ const TouchWithMe = () => {
             {/* Image end */}
           </Row>
           <motion.div
-            initial={{ y: 0, rotate: 0, scale: 0.9 }}
-            animate={{ y: [0, 30, 0], rotate: [-15, 0, -15], scale: 0.9 }}
+            initial={{ y: 0, rotate: -170, scale: 0.9 }}
+            animate={{ y: [0, 30, 0], rotate: [-185, -170, -185], scale: 0.9 }}
             transition={{ duration: 2, repeat: Infinity }}
             className="circle3"
           >

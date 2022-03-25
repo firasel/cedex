@@ -16,7 +16,7 @@ const NavBar = () => {
   const [stickyState, setStickyState] = useState(false);
   // Navbar ref and extra div height
   const navbarRef = useRef();
-  const [height, setHeight] = useState(1);
+  const [height, setHeight] = useState(102);
 
   // Track window scroll
   const stickyHandler = (e) => {
@@ -25,7 +25,6 @@ const NavBar = () => {
   };
   // Track navbar height depend on window size
   const navbarHeightHandler = () => {
-    console.log("track");
     setHeight(navbarRef?.current?.offsetHeight);
   };
 
