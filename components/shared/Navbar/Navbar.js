@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
@@ -10,10 +10,28 @@ import style from "./Navbar.module.scss";
 const NavBar = () => {
   // State for menu expand and unexpand control
   const [expand, setExpand] = useState(true);
+  // Navbar sticky state
+  const [stickyState, setStickyState] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickyHandler);
+    return () => {
+      window.removeEventListener("scroll", stickyHandler);
+    };
+  });
+  // Track window scroll
+  const stickyHandler = (e) => {
+    const scrollTop = window.scrollY;
+    scrollTop >= 100 ? setStickyState(true) : setStickyState(false);
+  };
 
   return (
     <>
-      <Navbar className={style.navbarStyle} collapseOnSelect expand="md">
+      <Navbar
+        className={`${style.navbarStyle} ${stickyState && 'navbarStickyStyle'}`}
+        collapseOnSelect
+        expand="md"
+      >
         <Container className="py-1 py-md-3 position-relative">
           {/* Navbar logo start */}
           <Navbar.Brand className="logo" href="#">

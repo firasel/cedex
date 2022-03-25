@@ -1,13 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import {
-  BsGithub,
-  BsPinterest,
-  BsReddit,
-  BsSlack,
-  BsSnapchat,
-  BsTwitter
-} from "react-icons/bs";
+import journeyData from "../../../data/journeyData";
 import style from "./Journey.module.scss";
 
 const Journey = () => {
@@ -17,80 +10,23 @@ const Journey = () => {
         {/* Heading start */}
         <Row>
           <Col md={10} lg={6} xl={5}>
-            <h2 className="sectionTitle">My Journey</h2>
-            <p className="subTitle">
-              I am a person who is very excited to learn and is disciplined on
-              the given task and always gives the best for the company.
-            </p>
+            <h2 className="sectionTitle">{journeyData?.section?.title}</h2>
+            <p className="subTitle">{journeyData?.section?.details}</p>
           </Col>
         </Row>
         {/* Heading end */}
         {/* Cards start */}
         <Row className="justify-content-md-between">
-          <Col md={6} lg={5}>
-            <div className="journeyCard">
-              <div className="logo">
-                <BsSlack color="#6154f2" />
-              </div>
+          {journeyData?.jobs?.map((data, index) => (
+            <Col key={index} md={6} lg={5} className="journeyCard">
+              <div className="logo">{data?.icon}</div>
               <div className="content">
-                <h4>Lead UI Designer</h4>
-                <span>Slack</span>
-                <p>2021 - Present</p>
+                <h4>{data?.position}</h4>
+                <span>{data?.companyName}</span>
+                <p>{data?.time}</p>
               </div>
-            </div>
-            <div className="journeyCard">
-              <div className="logo">
-                <BsGithub color="#455A64" />
-              </div>
-              <div className="content">
-                <h4>UI Designer</h4>
-                <span>Github</span>
-                <p>2021 - 2021</p>
-              </div>
-            </div>
-            <div className="journeyCard">
-              <div className="logo">
-                <BsTwitter color="#03A9F4" />
-              </div>
-              <div className="content">
-                <h4>Senior UI Designer</h4>
-                <span>Twitter</span>
-                <p>2020 - 2021</p>
-              </div>
-            </div>
-          </Col>
-          <Col md={6} lg={5}>
-            <div className="journeyCard">
-              <div className="logo">
-                <BsSnapchat color="#e854f2" />
-              </div>
-              <div className="content">
-                <h4>UI/UX Designer</h4>
-                <span>Snapchat</span>
-                <p>2019 - 2020</p>
-              </div>
-            </div>
-            <div className="journeyCard">
-              <div className="logo">
-                <BsReddit color="#F26322" />
-              </div>
-              <div className="content">
-                <h4>UX Designer</h4>
-                <span>Reddit</span>
-                <p>2018 - 2019</p>
-              </div>
-            </div>
-            <div className="journeyCard">
-              <div className="logo">
-                <BsPinterest color="#E60023" />
-              </div>
-              <div className="content">
-                <h4>Web Designer</h4>
-                <span>Pinterest</span>
-                <p>2018 - 2018</p>
-              </div>
-            </div>
-          </Col>
+            </Col>
+          ))}
         </Row>
         {/* Cards end */}
       </Container>

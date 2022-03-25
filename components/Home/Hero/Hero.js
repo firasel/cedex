@@ -4,8 +4,8 @@ import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import Ellipse from "../../../assets/images/common/Ellipse1.svg";
 import Polygon from "../../../assets/images/Hero/Polygon1.svg";
-import ProfileImg from "../../../assets/images/Hero/profile01.jpg";
 import Rectangle from "../../../assets/images/Hero/Rectangle.svg";
+import heroData from "../../../data/heroData";
 import style from "./Hero.module.scss";
 
 const Hero = () => {
@@ -15,11 +15,13 @@ const Hero = () => {
         <Col md={6} lg={5} className="d-flex align-items-center">
           {/* Hero details start */}
           <div className="heroDetails">
-            <h5>Senior UX/UI Designer</h5>
-            <h2>Hello, I am <br /> John Doe</h2>
-            <p>
-              I am a freelancer based in the United State and I&apos;ve been constructing noteworthy UX/UI designs and websites for years, which comply with the brand new layout trends. I help convert an imaginative and prescient idea into significant and beneficial merchandise.
-            </p>
+            <h5>{heroData?.shortTitle}</h5>
+            <h2>
+              {heroData?.title1}
+              <br />
+              {heroData?.title2}
+            </h2>
+            <p>{heroData?.details}</p>
             <Button>Hire Me</Button>
           </div>
           {/* Hero details end */}
@@ -27,7 +29,7 @@ const Hero = () => {
         <Col md={6} lg={4} className="d-flex align-items-center offset-lg-2">
           <div className="heroImage">
             {/* Hero profile image */}
-            <Image layout="responsive" src={ProfileImg} alt="hero image" />
+            <Image layout="responsive" src={heroData?.image} alt="hero image" />
             {/* Image background style start*/}
             <div>
               <motion.div

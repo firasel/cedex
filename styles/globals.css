@@ -24,6 +24,25 @@ a {
   color: #11142d;
 }
 
+.navbarStickyStyle {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #6154f2eb;
+  z-index: 30;
+  animation-name: topToShow;
+  animation-duration: 0.7s;
+}
+
+@keyframes topToShow {
+  0% {
+    top: -8rem;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .sectionTitle {
     font-size: 2rem;

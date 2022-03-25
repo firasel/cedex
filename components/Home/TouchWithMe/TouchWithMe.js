@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Ellipse from "../../../assets/images/common/Ellipse1.svg";
-import ProfileImg from "../../../assets/images/TouchWithMe/profile02.jpg";
+import tochWithMeData from "../../../data/tochWithMeData";
 import style from "./TouchWithMe.module.scss";
 
 const TouchWithMe = () => {
@@ -13,20 +13,19 @@ const TouchWithMe = () => {
           <Row className="align-items-center justify-content-between">
             {/* Content start */}
             <Col className="contentStyle order-1 order-md-0" md={6} lg={6}>
-              <h2 className="sectionTitle">Get Touch With Me</h2>
-              <h5>Who Person Growth of Startup in USA</h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum
-                eget libero elementum amet ultricies ut hac ultrices
-                ullamcorper. Enim nullam eu libero accumsan, nisl amet. Diam
-                tristique nulla libero, massa malesuada neque.
-              </p>
+              <h2 className="sectionTitle">{tochWithMeData?.title}</h2>
+              <h5>{tochWithMeData?.secondTitle}</h5>
+              <p>{tochWithMeData?.details}</p>
               <button>Let&apos;s Talk</button>
             </Col>
             {/* Content end */}
             {/* Image start */}
             <Col className="imageStyle order-0" md={6} lg={5}>
-              <Image src={ProfileImg} layout="responsive" alt="image" />
+              <Image
+                src={tochWithMeData?.image}
+                layout="responsive"
+                alt="image"
+              />
               <div className="circle1">
                 <Image src={Ellipse} alt="ellipse" />
               </div>
