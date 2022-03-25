@@ -5,6 +5,20 @@ import serviceData from "../../../data/serviceData";
 import style from "./Services.module.scss";
 
 const Services = () => {
+  const variants = {
+    hover: {
+      rotate: [0, 4, -4, 4, -4, 0],
+      scale: [1, 1.07, 1],
+      transition: {
+        duration: 0.8,
+      },
+    },
+    rest: {
+      scale: 1,
+      rotate: 0,
+    },
+  };
+
   return (
     <div id="service" className={`${style.serviceStyle} sectionStyle`}>
       <Container>
@@ -29,12 +43,13 @@ const Services = () => {
               viewport={{ once: true }}
               className="col"
               key={index}
+              whileHover={{ children: "hover" }}
             >
-              <div>
-                <div>{data?.icon}</div>
+              <motion.div initial="rest" whileHover="hover" animate="rest">
+                <motion.div variants={variants}>{data?.icon}</motion.div>
                 <h4>{data?.title}</h4>
                 <p>{data?.details}</p>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </Row>
