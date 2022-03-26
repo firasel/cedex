@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import Ellipse from "../../../assets/images/common/Ellipse1.svg";
-import Polygon from "../../../assets/images/Hero/Polygon1.svg";
+import Polygon from "../../../assets/images/common/Polygon1.svg";
 import Rectangle from "../../../assets/images/Hero/Rectangle.svg";
 import style from "./Hero.module.scss";
 

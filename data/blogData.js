@@ -1,6 +1,13 @@
 import blogImg1 from "../assets/images/blog/blog1.jpg";
+import blogImg10 from "../assets/images/blog/blog10.jpg";
 import blogImg2 from "../assets/images/blog/blog2.jpg";
 import blogImg3 from "../assets/images/blog/blog3.jpg";
+import blogImg4 from "../assets/images/blog/blog4.jpg";
+import blogImg5 from "../assets/images/blog/blog5.jpg";
+import blogImg6 from "../assets/images/blog/blog6.jpg";
+import blogImg7 from "../assets/images/blog/blog7.jpg";
+import blogImg8 from "../assets/images/blog/blog8.jpg";
+import blogImg9 from "../assets/images/blog/blog9.jpg";
 
 const blogData = {
   section: {
@@ -10,7 +17,7 @@ const blogData = {
     {
       posted: "By Admin",
       comments: "3",
-      title: "How to become a UI Designer: A step-by-step guide for 2022.",
+      title: "How to become a UI Designer: A step-by-step guide for 2022",
       image: blogImg1,
     },
     {
@@ -22,8 +29,50 @@ const blogData = {
     {
       posted: "By Admin",
       comments: "5",
-      title: "Find out how to become a User Experience Designer in 2022.",
+      title: "Find out how to become a User Experience Designer in 2022",
       image: blogImg3,
+    },
+    {
+      posted: "By Admin",
+      comments: "8",
+      title: "What programming language should you study?",
+      image: blogImg4,
+    },
+    {
+      posted: "By Admin",
+      comments: "1",
+      title: "Learn programing languages with code challenges",
+      image: blogImg5,
+    },
+    {
+      posted: "By Admin",
+      comments: "5",
+      title: "The best way to design photographic business cards",
+      image: blogImg6,
+    },
+    {
+      posted: "By Admin",
+      comments: "9",
+      title: "Branding for an efficient personal branding",
+      image: blogImg7,
+    },
+    {
+      posted: "By Admin",
+      comments: "7",
+      title: "Design and development of a minimal fashion photography site",
+      image: blogImg8,
+    },
+    {
+      posted: "By Admin",
+      comments: "2",
+      title: "Benefits of working with business analytics",
+      image: blogImg9,
+    },
+    {
+      posted: "By Admin",
+      comments: "4",
+      title: "How to manage a powerful marketing operation?",
+      image: blogImg10,
     },
   ],
 };

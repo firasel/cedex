@@ -16,7 +16,7 @@ const Blog = () => {
       <Container>
         <h2 className="sectionTitle">{blogData?.section?.title}</h2>
         <Row className="row-cols-1 row-cols-md-3 gy-4 gy-md-0">
-          {blogData?.blogs?.map((data, index) => (
+          {blogData?.blogs?.slice(0, 3)?.map((data, index) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{
