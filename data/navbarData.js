@@ -12,7 +12,7 @@ const navbarData = {
       link: "/portfolio",
     },
     {
-      name: "About us",
+      name: "About",
       link: "/about",
     },
     {

@@ -5,10 +5,9 @@ import { Button, Col, Row } from "react-bootstrap";
 import Ellipse from "../../../assets/images/common/Ellipse1.svg";
 import Polygon from "../../../assets/images/Hero/Polygon1.svg";
 import Rectangle from "../../../assets/images/Hero/Rectangle.svg";
-import heroData from "../../../data/heroData";
 import style from "./Hero.module.scss";
 
-const Hero = () => {
+const Hero = ({ heroData }) => {
   return (
     <div className={`container sectionStyle ${style.heroSection}`}>
       <Row className="heroContainer m-0 p-0">

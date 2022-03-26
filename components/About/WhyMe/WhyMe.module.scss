@@ -1,0 +1,47 @@
+.whyMeStyle :global {
+  overflow: hidden;
+  background-color: lighten($color: #6154f2, $amount: 34);
+  .imageStyle {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    img {
+      border: 0;
+      border-radius: 8px;
+    }
+  }
+  .subTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.45rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #515151;
+  }
+  .listItem {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.45rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #11142d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    svg {
+      color: #6154f2;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .subTitle {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .listItem {
+      font-size: 1rem;
+      line-height: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

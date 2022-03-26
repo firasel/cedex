@@ -4,7 +4,7 @@ const tochWithMeData = {
   title: "Get Touch With Me",
   secondTitle: "Who Person Growth of Startup in USA",
   details:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum eget libero elementum amet ultricies ut hac ultrices ullamcorper. Enim nullam eu libero accumsan, nisl amet. Diam tristique nulla libero, massa malesuada neque.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales consectetur porta. Aliquam ac interdum turpis. Donec vitae tempor massa, id pellentesque nulla. Proin finibus bibendum sapien. Nulla aliquam nec dolor ut faucibus.",
   image: ProfileImg,
 };
 

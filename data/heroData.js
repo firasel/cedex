@@ -5,7 +5,7 @@ const heroData = {
   title1: "Hello, I am",
   title2: "John Doe",
   details:
-    "I am a freelancer based in the United State and I&apos;ve been constructing noteworthy UX/UI designs and websites for years, which comply with the brand new layout trends. I help convert an imaginative and prescient idea into significant and beneficial merchandise.",
+    "I am a freelancer based in the United State and I've been constructing noteworthy UX/UI designs and websites for years, which comply with the brand new layout trends. I help convert an imaginative and prescient idea into significant and beneficial merchandise.",
   image: ProfileImg,
 };
 

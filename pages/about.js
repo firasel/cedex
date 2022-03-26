@@ -1,20 +1,19 @@
 import Head from "next/head";
-import Blog from "../components/Home/Blog/Blog";
+import React from "react";
+import Skill from "../components/About/Skill/Skill";
+import WhyMe from "../components/About/WhyMe/WhyMe";
 import Header from "../components/Home/Header/Header";
 import Journey from "../components/Home/Journey/Journey";
-import Project from "../components/Home/Project/Project";
 import Services from "../components/Home/Services/Services";
-import Specialty from "../components/Home/Specialty/Specialty";
-import Testimonial from "../components/Home/Testimonial/Testimonial";
 import TouchWithMe from "../components/Home/TouchWithMe/TouchWithMe";
 import Footer from "../components/shared/Footer/Footer";
-import heroData from "../data/heroData";
+import aboutMeData from "../data/aboutMeData";
 
-export default function home() {
+const about = () => {
   return (
     <div>
       <Head>
-        <title>Cedex - Personal portfolio</title>
+        <title>Cedex - About</title>
         <meta
           name="description"
           content="Cedex | Personal portfolio React Next.JS template"
@@ -22,16 +21,16 @@ export default function home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header heroData={heroData} />
-        <Specialty />
-        <Project />
+        <Header heroData={aboutMeData.heroSection} />
+        <Skill />
+        <WhyMe />
         <Journey />
         <TouchWithMe />
         <Services />
-        <Testimonial />
-        <Blog />
         <Footer />
       </main>
     </div>
   );
-}
+};
+
+export default about;
