@@ -1,19 +1,19 @@
 import Head from "next/head";
 import React from "react";
-import { Container } from "react-bootstrap";
-import BlogLists from "../components/AllBlogs/BlogLists/BlogLists";
-import Hero from "../components/AllBlogs/Hero/Hero";
-import SideBar from "../components/AllBlogs/SideBar/SideBar";
+import ContactForm from "../components/Contact/ContactForm/ContactForm";
+import GetInTouch from "../components/Contact/GetInTouch/GetInTouch";
+import Hero from "../components/Contact/Hero/Hero";
+import Map from "../components/Contact/Map/Map";
 import Footer from "../components/shared/Footer/Footer";
 import HeaderWrapper from "../components/shared/HeaderWrapper/HeaderWrapper";
 import Hero2 from "../components/shared/Hero2/Hero2";
 import NavBar from "../components/shared/Navbar/Navbar";
 
-const blogs = () => {
+const contact = () => {
   return (
     <div>
       <Head>
-        <title>Cedex - Blogs</title>
+        <title>Cedex - Contact</title>
         <meta
           name="description"
           content="Cedex | Personal portfolio React Next.JS template"
@@ -27,16 +27,13 @@ const blogs = () => {
             <Hero />
           </Hero2>
         </HeaderWrapper>
-        <Container>
-          <div className="sectionStyle d-md-flex gap-5">
-            <BlogLists />
-            <SideBar />
-          </div>
-        </Container>
+        <GetInTouch />
+        <ContactForm />
+        <Map />
         <Footer />
       </main>
     </div>
   );
 };
 
-export default blogs;
+export default contact;

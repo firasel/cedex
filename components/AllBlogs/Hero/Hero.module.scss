@@ -1,85 +1,55 @@
-.heroSection :global {
+.blogHero :global {
   overflow: hidden;
-  .heroContainer {
+  .searchBox {
     position: relative;
-    .searchBox {
-      position: relative;
-      z-index: 1;
-      input {
-        width: 100%;
-        padding: 13px 20px;
-        border: 2px solid white;
-        border-radius: 999px;
-        background: none;
+    z-index: 1;
+    input {
+      width: 100%;
+      padding: 13px 20px;
+      border: 2px solid white;
+      border-radius: 999px;
+      background: none;
+      color: white;
+      outline: white;
+      font-size: 1.2rem;
+      letter-spacing: 0.4px;
+      &::placeholder {
+        color: darken($color: white, $amount: 10);
+      }
+    }
+    button {
+      position: absolute;
+      top: 11px;
+      right: 11px;
+      background: none;
+      padding: 2px;
+      border: none;
+      border-radius: 999px;
+      outline: none;
+      svg {
         color: white;
-        outline: white;
-        font-size: 1.2rem;
-        letter-spacing: 0.4px;
-        &::placeholder {
-          color: darken($color: white, $amount: 10);
-        }
+        font-size: 2rem;
       }
-      button {
-        position: absolute;
-        top: 11px;
-        right: 11px;
-        background: none;
-        padding: 2px;
-        border: none;
-        border-radius: 999px;
-        outline: none;
-        svg {
-          color: white;
-          font-size: 2rem;
-        }
-      }
-    }
-    .polygon {
-      position: absolute;
-      top: -10vh;
-      left: 15vw;
-      z-index: 0;
-    }
-    .circle1,
-    .circle2 {
-      position: absolute;
-      top: 0;
-      z-index: 0;
-    }
-    .circle1 {
-      right: 0;
     }
   }
 
   @media screen and (max-width: 767px) {
-    .heroContainer {
-      padding: 2rem 0;
-      .searchBox {
-        position: relative;
-        input {
-          width: 100%;
-          padding: 8px 15px;
-          font-size: 1.1rem;
-          letter-spacing: 0.3px;
-        }
-        button {
-          top: 7px;
-          right: 7px;
-          padding: 2px;
-          svg {
-            font-size: 1.8rem;
-          }
+    .searchBox {
+      position: relative;
+      input {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 1.1rem;
+        letter-spacing: 0.3px;
+      }
+      button {
+        top: 7px;
+        right: 7px;
+        padding: 2px;
+        svg {
+          font-size: 1.8rem;
         }
       }
-    }
-    .polygon {
-      display: none !important;
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    .polygon {
-      top: -8vh !important;
-      left: 15vw;
     }
   }
 }
