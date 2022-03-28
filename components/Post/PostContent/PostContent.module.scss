@@ -1,0 +1,28 @@
+.postContentSection :global {
+  .blogContent {
+    img {
+      border-radius: 8px;
+    }
+    .comment {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 1rem 0;
+      svg {
+        color: #6154f2;
+      }
+    }
+    .content {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      h4 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

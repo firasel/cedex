@@ -1,19 +1,17 @@
 import Head from "next/head";
 import React from "react";
-import { Container } from "react-bootstrap";
-import BlogLists from "../components/AllBlogs/BlogLists/BlogLists";
-import Hero from "../components/AllBlogs/Hero/Hero";
+import Hero from "../components/ProjectDetails/Hero/Hero";
+import ProjectDescription from "../components/ProjectDetails/ProjectDescription/ProjectDescription";
 import Footer from "../components/shared/Footer/Footer";
 import HeaderWrapper from "../components/shared/HeaderWrapper/HeaderWrapper";
 import Hero2 from "../components/shared/Hero2/Hero2";
 import NavBar from "../components/shared/Navbar/Navbar";
-import SideBar from "../components/shared/SideBar/SideBar";
 
-const blogs = () => {
+const projectdetails = () => {
   return (
     <div>
       <Head>
-        <title>Cedex - Blogs</title>
+        <title>Cedex - Project Details</title>
         <meta
           name="description"
           content="Cedex | Personal portfolio React Next.JS template"
@@ -27,16 +25,11 @@ const blogs = () => {
             <Hero />
           </Hero2>
         </HeaderWrapper>
-        <Container>
-          <div className="sectionStyle d-md-flex gap-5">
-            <BlogLists />
-            <SideBar />
-          </div>
-        </Container>
+        <ProjectDescription />
         <Footer />
       </main>
     </div>
   );
 };
 
-export default blogs;
+export default projectdetails;

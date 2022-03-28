@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
@@ -7,6 +8,8 @@ import projectData from "../../../data/projectData";
 import style from "./Project.module.scss";
 
 const Project = () => {
+  const router = useRouter();
+
   return (
     <div className={`${style.projectStyle} sectionStyle`}>
       <Container>
@@ -32,7 +35,10 @@ const Project = () => {
                   <div>
                     <h5>{data?.category}</h5>
                     <h3>{data?.title}</h3>
-                    <Button variant="none">
+                    <Button
+                      onClick={() => router.push("/projectdetails")}
+                      variant="none"
+                    >
                       View Project <MdOutlineArrowForwardIos />
                     </Button>
                   </div>
