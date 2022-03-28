@@ -1,0 +1,44 @@
+.skillStyle :global {
+  overflow: hidden;
+  // Card css start
+  .cardStyle {
+    text-align: center;
+    &:hover {
+      > div {
+        transform: scale(1.03);
+        background-color: lighten($color: #6154f2, $amount: 30);
+        box-shadow: lighten($color: #6154f2, $amount: 32) 0px 0px 25px 10px;
+        transition: all 0.3s;
+      }
+    }
+    > div {
+      width: 5.5rem;
+      height: 5.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #6154f2;
+      background-color: lighten($color: #6154f2, $amount: 30);
+      box-shadow: lighten($color: #6154f2, $amount: 32) 0px 0px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      padding: 10px;
+      margin: 0 auto 30px auto;
+      transition: all 0.2s;
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #161616;
+    }
+    p {
+      font-size: 1rem;
+      color: #4a4a4a;
+      font-family: "Mulish", sans-serif;
+      margin: 0;
+    }
+  }
+  // Card css end
+}

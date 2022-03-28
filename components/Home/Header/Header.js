@@ -1,10 +1,13 @@
 import React from "react";
 import Navbar from "../../shared/Navbar/Navbar";
+import Hero from "../Hero/Hero";
+import style from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({ heroData }) => {
   return (
-    <div>
+    <div className={style.headerStyle}>
       <Navbar />
+      <Hero heroData={heroData} />
     </div>
   );
 };

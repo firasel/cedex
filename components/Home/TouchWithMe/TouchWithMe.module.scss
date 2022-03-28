@@ -1,0 +1,139 @@
+.touchWithMeStyle :global {
+  background-color: #6154f2;
+  position: relative;
+  overflow: hidden;
+  .contentStyle {
+    color: white;
+    z-index: 1;
+    h2 {
+      color: white;
+    }
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.3rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 30px;
+    }
+    button {
+      color: white;
+      background: none;
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 0.7rem 1.3rem;
+    }
+  }
+  .imageStyle {
+    position: relative;
+    img {
+      border-radius: 8px;
+    }
+    .circle1 {
+      position: absolute;
+      bottom: -8vh;
+      left: -4.5vw;
+      transform: scale(0.8) rotate(15deg);
+    }
+    .circle2 {
+      position: absolute;
+      top: -5vh;
+      right: -5vw;
+      transform: scale(0.5) rotate(-120deg);
+    }
+  }
+  .circle3 {
+    position: absolute;
+    top: -10vh;
+    left: -5vw;
+    transform: rotate(190deg) scale(0.9);
+    z-index: 0;
+  }
+  @media screen and (max-width: 1400px) {
+    .circle3 {
+      top: -14vh;
+      left: -5vw;
+    }
+    .imageStyle {
+      .circle1 {
+        bottom: -8vh;
+        left: -6.5vw;
+      }
+      .circle2 {
+        top: -5vh;
+        right: -7vw;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .circle3 {
+      top: -16vh;
+      left: -6vw;
+    }
+    .imageStyle {
+      .circle1 {
+        bottom: -8vh;
+        left: -7.5vw;
+      }
+      .circle2 {
+        top: -5vh;
+        right: -8.5vw;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .circle3 {
+      top: -18vh;
+      left: -6vw;
+      transform: rotate(190deg) scale(0.8);
+    }
+    .imageStyle {
+      .circle1 {
+        bottom: -8vh;
+        left: -8.5vw;
+        transform: scale(0.6) rotate(15deg);
+      }
+      .circle2 {
+        top: -5vh;
+        right: -9.5vw;
+        transform: scale(0.4) rotate(-120deg);
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .imageStyle {
+      width: 90%;
+      margin: auto;
+      .circle1 {
+        bottom: -9vh;
+        left: -20.5vw;
+        transform: scale(0.6) rotate(15deg);
+      }
+      .circle2 {
+        top: -8vh;
+        right: -25.5vw;
+        transform: scale(0.4) rotate(-120deg);
+      }
+    }
+    .circle3 {
+      display: none;
+    }
+    .imageStyle {
+      margin-bottom: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .imageStyle {
+      .circle1 {
+        display: none;
+      }
+      .circle2 {
+        display: none;
+      }
+    }
+  }
+}

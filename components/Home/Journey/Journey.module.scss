@@ -1,0 +1,75 @@
+.journeyStyle :global {
+  overflow: hidden;
+  .subTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #515151;
+  }
+  .journeyCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    .logo {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: lighten($color: #6154f2, $amount: 30);
+      box-shadow: lighten($color: #6154f2, $amount: 32) 0px 0px 20px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .content {
+      h4 {
+        font-size: 1.5rem;
+        color: #11142d;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      span {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #6154f2;
+      }
+      p {
+        font-size: 1rem;
+        color: #515151;
+        margin-top: 5px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .subTitle {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .journeyCard {
+      gap: 0.6rem;
+      margin-top: 1rem;
+      .logo {
+        width: 4rem;
+        height: 4rem;
+        padding: 10px;
+      }
+    }
+    .content {
+      h4 {
+        font-size: 1.2rem !important;
+        margin-bottom: 3px !important;
+      }
+      span {
+        font-size: 0.95rem !important;
+      }
+      p {
+        font-size: 0.85rem !important;
+      }
+    }
+  }
+}

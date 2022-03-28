@@ -1,0 +1,166 @@
+.heroSection :global {
+  // Hero details css start
+  .heroDetails {
+    h5,
+    h2,
+    p {
+      margin: 0 0 1.5rem 0;
+      letter-spacing: 0.5px;
+      color: white;
+    }
+    h5 {
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 4rem;
+      line-height: 3.8rem;
+      letter-spacing: 0;
+    }
+    button {
+      background-color: #f6a546;
+      color: white;
+      border-radius: 8px;
+      border: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 13px 18px;
+      transition: all 0.1s;
+      letter-spacing: 0.8px;
+      font-family: "Mulish", sans-serif;
+      &:hover {
+        transition: all 0.3s;
+        background-color: darken($color: #f6a546, $amount: 5);
+      }
+    }
+  }
+  // Hero image css end
+  // Hero image css start
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      border-radius: 8px;
+      border: 0;
+    }
+    .circle1 {
+      position: absolute !important;
+      top: 1rem;
+      left: -5vw;
+      width: 10rem;
+      height: 10rem;
+    }
+    .circle2 {
+      position: absolute !important;
+      bottom: -5rem;
+      right: -5vw;
+      width: 11rem;
+      height: 11rem;
+    }
+    .rectangle {
+      position: absolute !important;
+      bottom: 4vh;
+      left: -2.5vw;
+      width: 5rem;
+    }
+    .polygon {
+      position: absolute !important;
+      top: 1rem;
+      right: -2vw;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  // Hero image css end
+  // Hero responsive css start
+  @media screen and (max-width: 1199px) {
+    .heroImage {
+      .circle1 {
+        width: 7rem;
+        height: 7rem;
+      }
+      .circle2 {
+        width: 8rem;
+        height: 8rem;
+        bottom: -2.5rem;
+      }
+      .rectangle {
+        width: 4rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .heroContainer {
+      > div:first-child {
+        margin-bottom: 40px;
+      }
+    }
+    .heroDetails {
+      h5,
+      h2,
+      p {
+        margin: 0 0 1rem 0;
+        letter-spacing: 0.3px;
+      }
+      h5 {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        letter-spacing: 0;
+      }
+    }
+    .heroImage {
+      .circle1 {
+        left: -8vw;
+        width: 8rem;
+        height: 8rem;
+      }
+      .circle2 {
+        bottom: -3.5rem;
+        right: -9vw;
+        width: 9rem;
+        height: 9rem;
+      }
+      .rectangle {
+        left: -5vw;
+      }
+      .polygon {
+        right: -4vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .heroContainer {
+      > div:first-child {
+        margin-bottom: 30px;
+      }
+    }
+    .heroImage {
+      .circle1 {
+        left: -12vw;
+        width: 7rem;
+        height: 7rem;
+      }
+      .circle2 {
+        bottom: -3rem;
+        right: -13vw;
+        width: 8rem;
+        height: 8rem;
+      }
+      .rectangle {
+        left: -6vw;
+        width: 4rem;
+      }
+      .polygon {
+        right: -5vw;
+      }
+    }
+  }
+  // Hero responsive css end
+}
