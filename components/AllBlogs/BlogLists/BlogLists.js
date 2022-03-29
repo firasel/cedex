@@ -8,16 +8,16 @@ import {
   FaLongArrowAltRight,
   FaRegUserCircle
 } from "react-icons/fa";
-import blogData from "../../../data/blogData";
 import style from "./BlogLists.module.scss";
 
-const BlogLists = () => {
+const BlogLists = ({ blogsData }) => {
   const router = useRouter();
+
   return (
     <div className={style.blogListStyle}>
       <Row className="row-cols-1 row-cols-md-1 row-cols-lg-2">
         {/* Blog cards start */}
-        {blogData?.blogs?.map((data, index) => (
+        {blogsData?.map((data, index) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{

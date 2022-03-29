@@ -11,7 +11,7 @@ const ProjectDescription = () => {
     <div className={`${style.projectDescriptionStyle} sectionStyle`}>
       <Container className="projectContent">
         <Row>
-          <Col md={8} lg={6}>
+          <Col md={10} lg={8} xl={6}>
             <h2 className="sectionTitle">Project Description</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -37,7 +37,7 @@ const ProjectDescription = () => {
             <SiAdobeillustrator />
           </div>
         </div>
-        <Row className="projectImage">
+        <Row className="projectImage row-cols-1 row-cols-lg-3 gy-4 gy-lg-0">
           <Col>
             <div>
               <Image layout="responsive" src={projectImage1} />

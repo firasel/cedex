@@ -1,6 +1,6 @@
 import Head from "next/head";
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import BlogLists from "../components/AllBlogs/BlogLists/BlogLists";
 import Hero from "../components/AllBlogs/Hero/Hero";
 import Footer from "../components/shared/Footer/Footer";
@@ -8,8 +8,30 @@ import HeaderWrapper from "../components/shared/HeaderWrapper/HeaderWrapper";
 import Hero2 from "../components/shared/Hero2/Hero2";
 import NavBar from "../components/shared/Navbar/Navbar";
 import SideBar from "../components/shared/SideBar/SideBar";
+import blogData from "../data/blogData";
 
-const blogs = () => {
+const Blogs = () => {
+  // State for search functionality implement
+  const [blogsData, setBlogsData] = useState(blogData?.blogs);
+
+  // Search handler function
+  const searcHandler = (e) => {
+    // Search input value
+    let searchValue = e?.target?.value?.trim()?.toLowerCase();
+    // Check value and filter the data
+    if (searchValue) {
+      setBlogsData(
+        blogData?.blogs?.filter((data) => {
+          if (data?.title?.toLowerCase()?.indexOf(searchValue) !== -1) {
+            return data;
+          }
+        })
+      );
+    } else {
+      setBlogsData(blogData?.blogs);
+    }
+  };
+
   return (
     <div>
       <Head>
@@ -24,14 +46,18 @@ const blogs = () => {
         <HeaderWrapper>
           <NavBar />
           <Hero2>
-            <Hero />
+            <Hero searcHandler={searcHandler} />
           </Hero2>
         </HeaderWrapper>
         <Container>
-          <div className="sectionStyle d-md-flex gap-5">
-            <BlogLists />
-            <SideBar />
-          </div>
+          <Row className="sectionStyle row">
+            <Col md={7} lg={8}>
+              <BlogLists blogsData={blogsData} />
+            </Col>
+            <Col md={5} lg={4}>
+              <SideBar />
+            </Col>
+          </Row>
         </Container>
         <Footer />
       </main>
@@ -39,4 +65,4 @@ const blogs = () => {
   );
 };
 
-export default blogs;
+export default Blogs;
