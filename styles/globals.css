@@ -45,6 +45,15 @@ a {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .sectionTitle {
     font-size: 2rem;
