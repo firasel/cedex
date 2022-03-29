@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import Ellipse from "../../../assets/images/common/Ellipse1.svg";
@@ -8,6 +9,8 @@ import Rectangle from "../../../assets/images/Hero/Rectangle.svg";
 import style from "./Hero.module.scss";
 
 const Hero = ({ heroData }) => {
+  const router = useRouter();
+
   return (
     <div className={`container sectionStyle ${style.heroSection}`}>
       <Row className="heroContainer m-0 p-0">
@@ -21,7 +24,7 @@ const Hero = ({ heroData }) => {
               {heroData?.title2}
             </h2>
             <p>{heroData?.details}</p>
-            <Button>Hire Me</Button>
+            <Button onClick={()=>router.push('/contact')} >Hire Me</Button>
           </div>
           {/* Hero details end */}
         </Col>

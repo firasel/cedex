@@ -3,10 +3,10 @@ import React from "react";
 import Skill from "../components/About/Skill/Skill";
 import WhyMe from "../components/About/WhyMe/WhyMe";
 import Header from "../components/Home/Header/Header";
-import Journey from "../components/Home/Journey/Journey";
-import Services from "../components/Home/Services/Services";
-import TouchWithMe from "../components/Home/TouchWithMe/TouchWithMe";
 import Footer from "../components/shared/Footer/Footer";
+import Journey from "../components/shared/Journey/Journey";
+import Services from "../components/shared/Services/Services";
+import TouchWithMe from "../components/shared/TouchWithMe/TouchWithMe";
 import aboutMeData from "../data/aboutMeData";
 
 const about = () => {
