@@ -39,12 +39,12 @@
       letter-spacing: 0.5px;
       padding: 0.6rem 1rem;
       outline: none;
-      border: 0;
+      border: 2px solid #ffffff00;
       border-radius: 8px;
       margin-bottom: 1.5rem;
     }
     button {
-      padding: 0.6rem 1.5rem;
+      padding: 0.5rem 1.5rem;
       border: 2px solid white;
       border-radius: 8px;
       background: none;
@@ -54,6 +54,9 @@
         transition: all 0.2s;
         background: #6154f2;
       }
+    }
+    .inputErrorStyle {
+      border: 2px solid lighten($color: red, $amount: 20) !important;
     }
   }
   .servicesLink {
