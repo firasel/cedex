@@ -28,8 +28,7 @@ a {
   position: fixed !important;
   width: 100%;
   top: 0;
-  padding-top: 0.8rem !important;
-  padding-bottom: 0.8rem !important;
+  padding: 0.8rem 0 !important;
   background: #6154f2eb;
   z-index: 30;
   animation-name: topToShow;
@@ -60,8 +59,7 @@ a {
     margin-bottom: 20px;
   }
   .navbarStickyStyle {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    padding: 0.2rem 0 !important;
   }
 }
 

@@ -1,9 +1,5 @@
-.extraDiv {
-  width: 100%;
-  height: 6rem;
-}
-
 .navbarStyle :global {
+  padding: 1.5rem 0;
   // Logo css start
   .logo {
     width: 5.8rem;
@@ -65,8 +61,9 @@
   // Menu toggle css end
   // Responsive css start
   @media screen and (max-width: 767px) {
+    padding: 0.5rem 0;
     .menuItemContainer {
-      margin-top: 7px;
+      margin-top: 3px;
       z-index: 10;
     }
     .menuItems {
