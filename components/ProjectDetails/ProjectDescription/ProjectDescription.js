@@ -40,17 +40,17 @@ const ProjectDescription = () => {
         <Row className="projectImage row-cols-1 row-cols-lg-3 gy-4 gy-lg-0">
           <Col>
             <div>
-              <Image layout="responsive" src={projectImage1} />
+              <Image layout="responsive" src={projectImage1} alt="Project image" />
             </div>
           </Col>
           <Col>
             <div>
-              <Image layout="responsive" src={projectImage1} />
+              <Image layout="responsive" src={projectImage1} alt="Project image" />
             </div>
           </Col>
           <Col>
             <div>
-              <Image layout="responsive" src={projectImage1} />
+              <Image layout="responsive" src={projectImage1} alt="Project image" />
             </div>
           </Col>
         </Row>

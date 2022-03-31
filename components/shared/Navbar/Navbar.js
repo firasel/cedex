@@ -48,8 +48,8 @@ const NavBar = () => {
       {stickyState && <div style={{ height: height }} className="w-100"></div>}
       <Navbar
         ref={navbarRef}
-        className={`${style.navbarStyle} ${
-          stickyState && "navbarStickyStyle"
+        className={`${stickyState && "navbarStickyStyle"} ${
+          style.navbarStyle
         } py-2 py-md-4`}
         collapseOnSelect
         expand="md"
