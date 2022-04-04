@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { Row } from "react-bootstrap";
 import {
-    FaComments,
-    FaLongArrowAltRight,
-    FaRegUserCircle
+  FaComments,
+  FaLongArrowAltRight,
+  FaRegUserCircle
 } from "react-icons/fa";
-import blogData from "../../../data/blogData";
 import style from "./BlogLists.module.scss";
 
-const BlogLists = () => {
+const BlogLists = ({ blogsData }) => {
+  const router = useRouter();
+
   return (
     <div className={style.blogListStyle}>
       <Row className="row-cols-1 row-cols-md-1 row-cols-lg-2">
-        {blogData?.blogs?.map((data, index) => (
+        {/* Blog cards start */}
+        {blogsData?.map((data, index) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{
@@ -30,7 +33,7 @@ const BlogLists = () => {
               whileHover={{ y: -10, transition: { duration: 0.4 } }}
               className="blogCard"
             >
-              <div className="image">
+              <div onClick={() => router.push("/post")} className="image">
                 <Image layout="fill" src={data?.image} alt="blog image" />
               </div>
               <div className="blogContent">
@@ -47,14 +50,15 @@ const BlogLists = () => {
                     </span>
                   )}
                 </div>
-                <h4>{data.title}</h4>
-                <button>
+                <h4 onClick={() => router.push("/post")}>{data.title}</h4>
+                <button onClick={() => router.push("/post")}>
                   Read More <FaLongArrowAltRight />
                 </button>
               </div>
             </motion.div>
           </motion.div>
         ))}
+        {/* Blog cards end */}
       </Row>
     </div>
   );

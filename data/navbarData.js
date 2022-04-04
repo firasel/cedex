@@ -8,12 +8,12 @@ const navbarData = {
       link: "/",
     },
     {
-      name: "Portfolio",
-      link: "/portfolio",
-    },
-    {
       name: "About",
       link: "/about",
+    },
+    {
+      name: "Portfolio",
+      link: "/portfolio",
     },
     {
       name: "Blogs",

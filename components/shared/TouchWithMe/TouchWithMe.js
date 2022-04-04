@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Ellipse from "../../../assets/images/common/Ellipse1.svg";
@@ -7,6 +8,7 @@ import tochWithMeData from "../../../data/tochWithMeData";
 import style from "./TouchWithMe.module.scss";
 
 const TouchWithMe = () => {
+  const router = useRouter();
   return (
     <div className={style.touchWithMeStyle}>
       <div className="sectionStyle">
@@ -61,6 +63,7 @@ const TouchWithMe = () => {
                   y: [0, 4, -4, 4, 0],
                   transition: { duration: 0.4 },
                 }}
+                onClick={() => router.push("/contact")}
               >
                 Let&apos;s Talk
               </motion.button>
@@ -93,7 +96,11 @@ const TouchWithMe = () => {
               </motion.div>
               <motion.div
                 initial={{ y: 0, rotate: -115, scale: 0.5 }}
-                animate={{ y: [0, 30, 0], rotate: [-130, -115, -130], scale: 0.5 }}
+                animate={{
+                  y: [0, 30, 0],
+                  rotate: [-130, -115, -130],
+                  scale: 0.5,
+                }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="circle2"
               >

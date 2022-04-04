@@ -37,6 +37,9 @@
           border: 2px solid #6154f2;
         }
       }
+      .inputErrorStyle {
+        border: 2px solid lighten($color: red, $amount: 20) !important;
+      }
     }
     .submitBtn {
       padding: 0.8rem 1.8rem;

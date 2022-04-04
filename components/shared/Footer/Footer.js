@@ -1,12 +1,42 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import Ellipse from "../../../assets/images/common/Ellipse1.svg";
 import footerData from "../../../data/footerData";
 import style from "./Footer.module.scss";
 
 const Footer = () => {
+  const router = useRouter();
+
+  // Sweetalert package configure in react
+  const MySwal = withReactContent(Swal);
+
+  // react hook form
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  // Form submit function
+  const onSubmit = (data) => {
+    console.log(data);
+    MySwal.fire({
+      icon: "success",
+      title: "Thanks",
+      showConfirmButton: false,
+      showCloseButton: true,
+      timer: 2000,
+    });
+    reset();
+  };
+
   return (
     <div className={style.footerStyle}>
       <div className="sectionStyle">
@@ -36,11 +66,17 @@ const Footer = () => {
                 <Image src={Ellipse} alt="ellipse" />
               </motion.div>
               <Image src={footerData?.logo} alt="logo" />
-              <br />
-              <label>{footerData?.formTitle}</label>
-              <br />
-              <input type="email" placeholder="Input your email here" />
-              <button>Subscribe</button>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <label>{footerData?.formTitle}</label>
+                <br />
+                <input
+                  className={errors.email && "inputErrorStyle"}
+                  {...register("email", { required: true })}
+                  type="email"
+                  placeholder="Input your email here"
+                />
+                <button type="submit">Subscribe</button>
+              </form>
             </Col>
             <Col md={4} lg={3} className="servicesLink">
               <div>
@@ -48,7 +84,13 @@ const Footer = () => {
                 <ul>
                   {footerData?.serivecs?.links?.map((data, index) => (
                     <li key={index}>
-                      <a href={data?.link}>{data?.name}</a>
+                      <a
+                        href={
+                          router.asPath === "/" ? data?.link : "/" + data?.link
+                        }
+                      >
+                        {data?.name}
+                      </a>
                     </li>
                   ))}
                 </ul>

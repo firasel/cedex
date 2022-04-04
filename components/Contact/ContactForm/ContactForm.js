@@ -1,10 +1,35 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import contactData from "../../../data/contactData";
 import style from "./ContactForm.module.scss";
 
 const ContactForm = () => {
+  // Sweetalert package configure in react
+  const MySwal = withReactContent(Swal);
+  // react hook form
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  // Form submit function
+  const onSubmit = (data) => {
+    console.log(data);
+    MySwal.fire({
+      icon: "success",
+      title: "Successful",
+      showConfirmButton: false,
+      showCloseButton: true,
+      timer: 2000,
+    });
+    reset();
+  };
+
   return (
     <div className={`${style.contactFormSection} sectionStyle`}>
       <Container>
@@ -49,7 +74,7 @@ const ContactForm = () => {
             </motion.p>
           </Col>
           <Col>
-            <div className="contactForm">
+            <form onSubmit={handleSubmit(onSubmit)} className="contactForm">
               <div className="d-lg-flex gap-3">
                 <motion.div
                   initial={{ y: 50, opacity: 0 }}
@@ -62,7 +87,12 @@ const ContactForm = () => {
                   className="inputStyle"
                 >
                   <label>Full Name</label>
-                  <input type="text" placeholder="Full name" />
+                  <input
+                    className={errors.fullName && "inputErrorStyle"}
+                    {...register("fullName", { required: true })}
+                    type="text"
+                    placeholder="Full name"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ y: 50, opacity: 0 }}
@@ -75,7 +105,12 @@ const ContactForm = () => {
                   className="inputStyle"
                 >
                   <label>Email</label>
-                  <input type="email" placeholder="Email" />
+                  <input
+                    className={errors.email && "inputErrorStyle"}
+                    {...register("email", { required: true })}
+                    type="email"
+                    placeholder="Email"
+                  />
                 </motion.div>
               </div>
               <div className="d-lg-flex gap-3">
@@ -90,7 +125,12 @@ const ContactForm = () => {
                   className="inputStyle"
                 >
                   <label>Phone</label>
-                  <input type="text" placeholder="Phone" />
+                  <input
+                    className={errors.phone && "inputErrorStyle"}
+                    {...register("phone", { required: true, minLength: 10 })}
+                    type="number"
+                    placeholder="Phone"
+                  />
                 </motion.div>
                 <motion.div
                   initial={{ y: 50, opacity: 0 }}
@@ -103,7 +143,12 @@ const ContactForm = () => {
                   className="inputStyle"
                 >
                   <label>Subject</label>
-                  <input type="text" placeholder="Subject" />
+                  <input
+                    className={errors.subject && "inputErrorStyle"}
+                    {...register("subject", { required: true })}
+                    type="text"
+                    placeholder="Subject"
+                  />
                 </motion.div>
               </div>
               <motion.div
@@ -117,7 +162,12 @@ const ContactForm = () => {
                 className="inputStyle"
               >
                 <label>Message</label>
-                <textarea rows={3} type="text" placeholder="Message" />
+                <textarea
+                  rows={3}
+                  className={errors.message && "inputErrorStyle"}
+                  {...register("message", { required: true })}
+                  placeholder="Message"
+                />
               </motion.div>
               <motion.button
                 initial={{ y: 50, opacity: 0 }}
@@ -129,10 +179,11 @@ const ContactForm = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -5, transition: { duration: 0.3 } }}
                 className="submitBtn"
+                type="submit"
               >
                 Submit
               </motion.button>
-            </div>
+            </form>
           </Col>
         </Row>
       </Container>

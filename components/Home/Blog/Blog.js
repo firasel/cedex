@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import {
@@ -11,6 +12,7 @@ import blogData from "../../../data/blogData";
 import style from "./Blog.module.scss";
 
 const Blog = () => {
+  const router = useRouter();
   return (
     <div className={`${style.blogStyle} sectionStyle`}>
       <Container>
@@ -28,7 +30,7 @@ const Blog = () => {
               key={index}
               className="blogCard col"
             >
-              <div className="image">
+              <div onClick={() => router.push("/post")} className="image">
                 <Image layout="responsive" src={data?.image} alt="blog image" />
               </div>
               <div className="blogContent">
@@ -45,8 +47,8 @@ const Blog = () => {
                     </span>
                   )}
                 </div>
-                <h4>{data.title}</h4>
-                <button>
+                <h4 onClick={() => router.push("/post")}>{data.title}</h4>
+                <button onClick={() => router.push("/post")}>
                   Read More <FaLongArrowAltRight />
                 </button>
               </div>
